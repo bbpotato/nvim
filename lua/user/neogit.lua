@@ -1,5 +1,5 @@
 local neogit_ok, neogit = pcall(require, 'neogit')
-local bindings_ok, bindings = pcall(require, 'user.bindings')
+local bind = require('user.bind').bind
 if not neogit_ok then return end
 
 -- configuration
@@ -9,4 +9,4 @@ neogit.setup({
 })
 
 -- keybindings
-bindings.bind {'n', '<Leader>g', ':Neogit<CR>'}
+bind {'n', '<Leader>g', ':Neogit<CR>'}

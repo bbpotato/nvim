@@ -2,8 +2,6 @@ local cmp_ok, cmp = pcall(require, 'cmp')
 local luasnip_ok, luasnip = pcall(require, 'luasnip')
 if not cmp_ok or not luasnip_ok then return end
 
-require("luasnip/loaders/from_vscode").lazy_load()
-
 cmp.setup({
   snippet = {
     expand = function(args)
@@ -30,7 +28,7 @@ cmp.setup({
     { name = "path" },
   },
   experimental = {
-    ghost_text = false,
+    ghost_text = true,
     native_menu = false
   },
 })

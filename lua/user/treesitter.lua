@@ -1,6 +1,7 @@
-local configs = require 'nvim-treesitter.configs'
+local configs = require("nvim-treesitter.configs")
+
 configs.setup {
-  ensure_installed = {'lua', 'html'},
+  ensure_installed = "maintained",
   sync_install = false,
   highlight = {
     enable = true,

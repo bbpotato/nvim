@@ -54,4 +54,7 @@ return packer.startup(function(use)
 
   -- treesitter
   use 'nvim-treesitter/nvim-treesitter'
+
+  -- autopairs
+  use "windwp/nvim-autopairs"
 end)

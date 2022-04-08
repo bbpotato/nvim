@@ -2,6 +2,7 @@ local cokeline_ok, cokeline = pcall(require, 'cokeline')
 local cokeline_utils_ok, cokeline_utils = pcall(require, 'cokeline/utils')
 if not cokeline_ok or not cokeline_utils_ok then return end
 
+-- minimal bufferline with a modified indicator [+]
 cokeline.setup{
   default_hl = {
     fg = function(buffer) return buffer.is_focused and cokeline_utils.get_hex('Normal', 'bg') or cokeline_utils.get_hex('Comment', 'fg') end,
